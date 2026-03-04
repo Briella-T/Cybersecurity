@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hello World</title>
+</head>
+<body>
+    <p>
+        GET / POST request:
+
+        GET /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh HTTP/1.1
+        -- This was used to try and get controls to the server and execute commands.
+
+        POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input HTTP/1.1" 200 11011
+        -- This was used to try and provide a file for themselves to execute commands on the server. 
+
+        -----------------------------------------------------------------
+
+        curl -Ivvv http://brie.mycybersecurityclass.com Output explained:
+        -- This output is showing the headers of the response from the server. 
+        It shows the HTTP version, status code, and other information about the response. 
+
+        -----------------------------------------------------------------
+
+        Security policies to implement:
+        1. Make some sort of firewall to block attacks especially from the same IP address.
+        2. Set stricter file permissions to ensure no one without authorization can access sensitive files.
+        3. Implement at least some sort of input validation to prevent malicious input from being processed by the server.
+
+    </p>
+</body>
+</html>
